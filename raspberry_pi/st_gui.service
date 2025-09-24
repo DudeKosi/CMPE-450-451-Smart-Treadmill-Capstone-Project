@@ -1,0 +1,13 @@
+[Unit]
+Description=Smart Treadmill Graphical User Interface
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/smart/ST/venv/bin/python3 /home/smart/ST/Smart-Treadmill/raspberry_pi/st_gui.py
+Restart=on-failure
+User=smart
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=multi-user.target
